@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madsaif Store</title>
+    <link rel="shortcut icon" href="ms.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="ms.jpg" alt="Madsaif Logo" class="logo-img">
+                <span class="logo-text">Mad<span>Saif</span> Store</span>
+            </div>
+
+            <!-- Search Bar (hidden on mobile) -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search products..." id="searchInput">
+                <button type="submit" id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Desktop Navigation Icons -->
+            <nav class="desktop-nav">
+                <a href="#" class="nav-icon" id="homeIcon" title="Home"><i class="fas fa-home"></i></a>
+                <a href="#" class="nav-icon" id="productsIcon" title="Products"><i class="fas fa-th-large"></i></a>
+                <a href="#" class="nav-icon" id="cartIcon" title="Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation (hidden by default) -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="#" class="mobile-nav-link"><i class="fas fa-th-large"></i> Products</a>
+            <a href="#" class="mobile-nav-link" id="mobileCartLink"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count-mobile">0</span></a>
+        </div>
+    </header>
+
+    <!-- Hero Banner (optional) -->
+    <section class="hero-banner">
+        <div class="container">
+            <h1>Welcome to Madsaif Store</h1>
+            <p>Discover the best software and tech products at amazing prices.</p>
+        </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Drawer (slide-in) -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be injected -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer (simple) -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Madsaif Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
